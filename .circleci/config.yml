@@ -8,16 +8,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Fetch CocoaPods Specs
-          command: |
-            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      - run:
-          name: Install CocoaPods
-          command: pod install --verbose
-
-      - run:
           name: Build and run tests
-          command: xcodebuild clean build
+          command: xcodebuild clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE=
 
 workflows:
   version: 2
