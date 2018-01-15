@@ -3,13 +3,13 @@ version: 2
 jobs:
   clean-build:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.0"
 
     steps:
       - checkout
       - run:
           name: Clean and Build 
-          command: xcodebuild clean build CODE_SIGNING_REQUIRED=NO
+          command: xcodebuild clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE=
 
 workflows:
   version: 2
