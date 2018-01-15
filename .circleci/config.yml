@@ -17,7 +17,7 @@ jobs:
 
       - run:
           name: Build and run tests
-          command: make build
+          command: xcodebuild clean build
 
 workflows:
   version: 2
