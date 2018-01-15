@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Clean and Build 
-          command: xcodebuild clean build CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY= PROVISIONING_PROFILE=
+          command: xcodebuild clean build PROVISIONING_PROFILE=
 
 workflows:
   version: 2
